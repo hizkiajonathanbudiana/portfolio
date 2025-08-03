@@ -1,48 +1,46 @@
-import { Canvas, useFrame } from "@react-three/fiber";
+import { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HeroText from "../components/HeroText";
-import ParallaxBackground from "../components/ParallaxBackground";
-import { Astronaut } from "../components/Astronaut";
-import { Float } from "@react-three/drei";
-import { useMediaQuery } from "react-responsive";
-import { easing } from "maath";
-import { Suspense } from "react";
-import Loader from "../components/Loader";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
-  const isMobile = useMediaQuery({ maxWidth: 853 });
+  const heroRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const heroElement = heroRef.current;
+    if (!heroElement) return;
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: heroElement,
+        start: "top top",
+        end: "bottom top",
+        scrub: 1.5,
+      },
+    });
+
+    tl.to(".gsap-hero-line", {
+      y: -100,
+      opacity: 0,
+      stagger: 0.1,
+    });
+
+    return () => {
+      tl.kill();
+    };
+  }, []);
+
   return (
-    <section className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start c-space">
+    <section
+      id="hero-section"
+      ref={heroRef}
+      className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start c-space"
+    >
       <HeroText />
-      <ParallaxBackground />
-      <figure
-        className="absolute inset-0"
-        style={{ width: "100vw", height: "100vh" }}
-      >
-        <Canvas camera={{ position: [0, 1, 3] }}>
-          <Suspense fallback={<Loader />}>
-            <Float>
-              <Astronaut
-                scale={isMobile && 0.23}
-                position={isMobile && [0, -1.5, 0]}
-              />
-            </Float>
-            <Rig />
-          </Suspense>
-        </Canvas>
-      </figure>
     </section>
   );
 };
-
-function Rig() {
-  return useFrame((state, delta) => {
-    easing.damp3(
-      state.camera.position,
-      [state.mouse.x / 10, 1 + state.mouse.y / 10, 3],
-      0.5,
-      delta
-    );
-  });
-}
 
 export default Hero;
