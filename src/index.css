@@ -1,131 +1,131 @@
-@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
 @import "tailwindcss";
 @theme {
-  --color-background: #F8F7F4;
-  --color-text-primary: #1a1a1a;
-  --color-text-secondary: #575757;
-  --color-card-bg: #FFFFFF;
-  --color-accent-light: #E0E7FF;
-  --color-accent-medium: #C7D2FE;
-  --color-accent-dark: #A5B4FC;
-  --color-accent-text: #3730A3;
-  --color-accent-special: #FFD8BE;
-  --animate-orbit: orbit 50s linear infinite;
-  @keyframes orbit {
-    0% {
-      transform: rotate(calc(var(--angle) * 1deg))
-        translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
-    }
-    100% {
-      transform: rotate(calc(var(--angle) * 1deg + 360deg))
-        translateY(calc(var(--radius) * 1px))
-        rotate(calc((var(--angle) * -1deg) - 360deg));
-    }
+ --color-background: #F8F7F4;
+ --color-text-primary: #1a1a1a;
+ --color-text-secondary: #575757;
+ --color-card-bg: #FFFFFF;
+ --color-accent-light: #E0E7FF;
+ --color-accent-medium: #C7D2FE;
+ --color-accent-dark: #A5B4FC;
+ --color-accent-text: #3730A3;
+ --color-accent-special: #FFD8BE;
+ --animate-orbit: orbit 50s linear infinite;
+ @keyframes orbit {
+  0% {
+   transform: rotate(calc(var(--angle) * 1deg))
+    translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
   }
-  --animate-marquee: marquee 50s linear infinite;
-  --animate-marquee-vertical: marquee-vertical 50s linear infinite;
+  100% {
+   transform: rotate(calc(var(--angle) * 1deg + 360deg))
+    translateY(calc(var(--radius) * 1px))
+    rotate(calc((var(--angle) * -1deg) - 360deg));
+  }
+ }
+ --animate-marquee: marquee 50s linear infinite;
+ --animate-marquee-vertical: marquee-vertical 50s linear infinite;
 
-  @keyframes marquee {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(calc(-100% - var(--gap)));
-    }
+ @keyframes marquee {
+  from {
+   transform: translateX(0);
   }
+  to {
+   transform: translateX(calc(-100% - var(--gap)));
+  }
+ }
 
-  @keyframes marquee-vertical {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(calc(-100% - var(--gap)));
-    }
+ @keyframes marquee-vertical {
+  from {
+   transform: translateY(0);
   }
+  to {
+   transform: translateY(calc(-100% - var(--gap)));
+  }
+ }
 }
 body {
-  background: var(--color-background);
-  font-family: "Funnel Display", sans-serif;
-  color: var(--color-text-primary);
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+ background: var(--color-background);
+ font-family: "Manrope", sans-serif;
+ color: var(--color-text-primary);
+ scroll-behavior: smooth;
+ overflow-x: hidden;
 }
 
 .c-space {
-  @apply sm:px-10 px-5 lg:px-15;
+ @apply sm:px-10 px-5 lg:px-15;
 }
 
 .hover-animation {
-  @apply hover:-translate-y-1 duration-200;
+ @apply hover:-translate-y-1 duration-200;
 }
 
 .section-spacing {
-  @apply min-h-screen mt-20 md:mt-30;
+ @apply min-h-screen mt-20 md:mt-30;
 }
 
 .text-heading {
-  @apply font-bold text-3xl md:text-4xl text-text-primary;
+ @apply font-bold text-3xl md:text-4xl text-text-primary;
 }
 
 .headtext {
-  @apply mt-2 mb-2 text-xl text-text-primary;
+ @apply mt-2 mb-2 text-xl text-text-primary;
 }
 
 .subtext {
-  @apply text-text-secondary text-sm md:text-base text-pretty;
+ @apply text-text-secondary text-sm md:text-base text-pretty;
 }
 
 .nav-ul {
-  @apply flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20;
+ @apply flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20;
 }
 
 .nav-li {
-  @apply text-text-secondary hover:text-text-primary max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
+ @apply text-text-secondary hover:text-text-primary max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
 }
 
 .nav-link {
-  @apply text-lg md:text-base hover:text-text-primary transition-colors;
+ @apply text-lg md:text-base hover:text-text-primary transition-colors;
 }
 
 .btn {
-  @apply relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-card-bg w-[12rem] cursor-pointer overflow-hidden shadow-md;
+ @apply relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-card-bg w-[12rem] cursor-pointer overflow-hidden shadow-md;
 }
 
 .grid-1 {
-  @apply row-span-2 md:col-span-3 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+ @apply row-span-2 md:col-span-3 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
 }
 .grid-2 {
-  @apply row-span-1 md:col-span-3 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+ @apply row-span-1 md:col-span-3 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
 }
 .grid-3 {
-  @apply row-span-1 md:col-span-3 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+ @apply row-span-1 md:col-span-3 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
 }
 .grid-4 {
-  @apply row-span-1 md:col-span-2 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+ @apply row-span-1 md:col-span-2 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
 }
 .grid-5 {
-  @apply row-span-1 md:col-span-4 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
+ @apply row-span-1 md:col-span-4 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
 }
 
 .grid-default-color {
-  @apply p-6 bg-card-bg rounded-2xl shadow-sm border border-black/5;
+ @apply p-6 bg-card-bg rounded-2xl shadow-sm border border-black/5;
 }
 
 .grid-special-color {
-  @apply p-6 bg-accent-light rounded-2xl shadow-sm border border-accent-medium/50;
+ @apply p-6 bg-accent-light rounded-2xl shadow-sm border border-accent-medium/50;
 }
 .grid-black-color {
-  @apply p-6 bg-text-primary rounded-2xl shadow-sm text-background;
+ @apply p-6 bg-text-primary rounded-2xl shadow-sm text-background;
 }
 
 .field-label {
-  @apply text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-text-secondary;
+ @apply text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-text-secondary;
 }
 
 .field-input {
-  @apply w-full min-h-10 rounded-md px-3 py-2 text-sm bg-black/5 transition duration-200 placeholder-text-secondary/50 border border-black/10 mt-2 text-text-primary;
+ @apply w-full min-h-10 rounded-md px-3 py-2 text-sm bg-black/5 transition duration-200 placeholder-text-secondary/50 border border-black/10 mt-2 text-text-primary;
 }
 
 .field-input-focus {
-  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-medium;
+ @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-medium;
 }
