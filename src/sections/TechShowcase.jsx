@@ -295,7 +295,7 @@ const TechShowcase = () => {
         </p>
       </div>
 
-      <div className="absolute w-full h-[50vh] mt-16 z-10 flex items-center justify-center">
+      <div className="absolute w-full h-[50vh] mt-60 z-10 flex items-center justify-center">
         {techLogos.map((tech) => (
           <img
             key={tech.name}
@@ -306,7 +306,7 @@ const TechShowcase = () => {
         ))}
       </div>
 
-      <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none mt-[20vh]">
+      <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none mt-100">
         <div className="relative text-center w-full h-[20vh]">
           {techLogos.map((tech) => (
             <div

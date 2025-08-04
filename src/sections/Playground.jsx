@@ -94,7 +94,7 @@ const Card = () => {
           maxWidth={3}
           textAlign="center"
         >
-          GSAP for fluid motion & Three.js for immersive scenes.
+          ....
         </Text>
       </group>
     </group>

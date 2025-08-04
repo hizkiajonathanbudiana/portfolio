@@ -66,11 +66,11 @@ const SceneContent = () => {
         );
 
         // --- STAGE 2 & 3: Fly-in and Fade-out ---
-        const aboutTrigger = document.getElementById("about");
+        const aboutTrigger = document.getElementById("tech-showcase");
         const flyInTl = gsap.timeline({
           scrollTrigger: {
             trigger: aboutTrigger,
-            start: "top 90%",
+            start: "top 10%",
             end: "top top",
             scrub: 1.5,
           },

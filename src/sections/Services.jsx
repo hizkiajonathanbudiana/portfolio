@@ -55,7 +55,7 @@ const Services = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="c-space section-spacing">
+    <section ref={sectionRef} className="c-space section-spacing" id="services">
       <div className="text-center">
         <h2 className="text-heading">What I Offer</h2>
         <p className="max-w-2xl mx-auto mt-4 subtext">

@@ -56,16 +56,22 @@ const Credits = () => {
           <span className="text-transparent bg-gradient-to-r from-accent-dark to-accent-text bg-clip-text">
             Me
           </span>{" "}
-          as the Architect,
+          piecing it together,
         </CreditLine>
         <CreditLine>
           &{" "}
           <span className="text-transparent bg-gradient-to-r from-accent-dark to-accent-text bg-clip-text">
             Gemini
           </span>{" "}
-          as the Assistant.
+          assisting along the way.
         </CreditLine>
-        <CreditLine>With approximately .. hours of work.</CreditLine>
+        <CreditLine>
+          With approximately{" "}
+          <span className="text-transparent bg-gradient-to-r from-accent-dark to-accent-text bg-clip-text">
+            unknown
+          </span>{" "}
+          hours of work.
+        </CreditLine>
       </div>
     </section>
   );
