@@ -11,7 +11,7 @@ import Experiences from "./sections/Experiences";
 import Testimonial from "./sections/Testimonial";
 import Philosophy from "./sections/Philosophy";
 import Playground from "./sections/Playground";
-import AssetShowcase from "./sections/AssetShowcase"; // <-- IMPORT BARU
+import AssetShowcase from "./sections/AssetShowcase";
 import Credits from "./sections/Credits";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
