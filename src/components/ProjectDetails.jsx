@@ -50,7 +50,11 @@ const ProjectDetails = ({
               className="inline-flex items-center gap-1 font-medium cursor-pointer text-accent-text hover-animation"
             >
               View Project{" "}
-              <img src="assets/arrow-up-dark.svg" className="size-4" />
+              <img
+                src="assets/arrow-up-dark.svg"
+                alt="View Project"
+                className="size-4"
+              />
             </a>
           </div>
         </div>

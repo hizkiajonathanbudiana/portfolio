@@ -270,3 +270,11 @@ overflow-x: hidden;
 .full-bleed-wrapper {
 @apply relative w-full;
 }
+
+.transition-overlay {
+  @apply fixed top-0 left-0 w-full h-screen z-[99] pointer-events-none opacity-0;
+}
+
+.full-bleed-wrapper {
+  @apply relative w-full;
+}

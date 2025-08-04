@@ -32,7 +32,11 @@ const Project = ({
           className="flex items-center gap-1 cursor-pointer text-text-secondary hover:text-text-primary hover-animation"
         >
           Read More
-          <img src="assets/arrow-right-dark.svg" className="w-5" />
+          <img
+            src="assets/arrow-right-dark.svg"
+            alt="Read More"
+            className="w-5"
+          />
         </button>
       </div>
 

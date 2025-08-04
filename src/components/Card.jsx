@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 const Card = ({ style, text, image, containerRef }) => {
   return image && !text ? (
     <motion.img
+      alt="card"
       className="absolute w-15 cursor-grab"
       src={image}
       style={style}
