@@ -127,3 +127,57 @@ export const reviews = [
     img: "https://robohash.org/eve",
   },
 ];
+
+export const philosophyData = [
+  {
+    id: 1,
+    title: "SOLID",
+    description:
+      "My code is built on SOLID principles, ensuring it's scalable, maintainable, and robust. This means creating software that is easy to understand, flexible to change, and stable over time.",
+    position: [0, 0, 0],
+    cameraTarget: [0, 0, 5],
+  },
+  {
+    id: 2,
+    title: "GRASP",
+    description:
+      "Applying GRASP (General Responsibility Assignment Software Patterns) helps me assign responsibilities to objects logically. This leads to a cleaner architecture and a system where every component has a clear purpose.",
+    position: [-8, 0, -10],
+    cameraTarget: [-8, 0, -5],
+  },
+  {
+    id: 3,
+    title: "Design Patterns",
+    description:
+      "I leverage proven Design Patterns to solve common software design problems. Whether it's Singleton, Factory, or Observer, these patterns provide a reusable blueprint for building elegant and efficient solutions.",
+    position: [8, 0, -20],
+    cameraTarget: [8, 0, -15],
+  },
+  {
+    id: 4,
+    title: "Clean Code",
+    description:
+      "Inspired by Robert C. Martin, I believe code should be read like prose. I focus on writing clean, self-documenting code with meaningful names and simple logic, making it a pleasure for anyone to work with.",
+    position: [0, 0, -30],
+    cameraTarget: [0, 0, -25],
+  },
+];
+
+export const toolkitData = [
+  "react",
+  "threejs",
+  "gsap",
+  "vitejs",
+  "tailwindcss",
+  "csharp",
+  "dotnet",
+  "blazor",
+  "javascript",
+  "html5",
+  "css3",
+  "git",
+  "cplusplus",
+  "auth0",
+  "microsoft",
+  "sqlite",
+];
