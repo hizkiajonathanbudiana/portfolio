@@ -65,7 +65,7 @@ const Credits = () => {
           </span>{" "}
           as the Assistant.
         </CreditLine>
-        <CreditLine>With approximately 5 hours of work.</CreditLine>
+        <CreditLine>With approximately .. hours of work.</CreditLine>
       </div>
     </section>
   );
