@@ -1,116 +1,323 @@
-// // // import React, { useLayoutEffect } from "react";
-// // // import gsap from "gsap";
-// // // import { ScrollTrigger } from "gsap/ScrollTrigger";
-// // // import Navbar from "./sections/Navbar";
-// // // import Hero from "./sections/Hero";
-// // // import Services from "./sections/Services";
-// // // import TechShowcase from "./sections/TechShowcase";
-// // // import About from "./sections/About";
-// // // import Projects from "./sections/Projects";
-// // // import Experiences from "./sections/Experiences";
-// // // import Testimonial from "./sections/Testimonial";
-// // // import Philosophy from "./sections/Philosophy";
-// // // import Playground from "./sections/Playground";
-// // // import AssetShowcase from "./sections/AssetShowcase";
-// // // import Credits from "./sections/Credits";
-// // // import Contact from "./sections/Contact";
-// // // import Footer from "./sections/Footer";
-// // // import Scene from "./components/Scene";
-// // // import PhilosophyJourney from "./sections/Philosophy_Journey";
-// // // import ToolkitJourney from "./sections/Toolkit_Journey";
-// // // import GlobalReachJourney from "./sections/GlobalReach_Journey";
-// // // import IntroductionJourney from "./sections/Introduction_Journey";
+// // // // // // import React, { useLayoutEffect } from "react";
+// // // // // // import gsap from "gsap";
+// // // // // // import { ScrollTrigger } from "gsap/ScrollTrigger";
+// // // // // // import Navbar from "./sections/Navbar";
+// // // // // // import Hero from "./sections/Hero";
+// // // // // // import Services from "./sections/Services";
+// // // // // // import TechShowcase from "./sections/TechShowcase";
+// // // // // // import About from "./sections/About";
+// // // // // // import Projects from "./sections/Projects";
+// // // // // // import Experiences from "./sections/Experiences";
+// // // // // // import Testimonial from "./sections/Testimonial";
+// // // // // // import Philosophy from "./sections/Philosophy";
+// // // // // // import Playground from "./sections/Playground";
+// // // // // // import AssetShowcase from "./sections/AssetShowcase";
+// // // // // // import Credits from "./sections/Credits";
+// // // // // // import Contact from "./sections/Contact";
+// // // // // // import Footer from "./sections/Footer";
+// // // // // // import Scene from "./components/Scene";
+// // // // // // import PhilosophyJourney from "./sections/Philosophy_Journey";
+// // // // // // import ToolkitJourney from "./sections/Toolkit_Journey";
+// // // // // // import GlobalReachJourney from "./sections/GlobalReach_Journey";
+// // // // // // import IntroductionJourney from "./sections/Introduction_Journey";
 
-// // // gsap.registerPlugin(ScrollTrigger);
+// // // // // // gsap.registerPlugin(ScrollTrigger);
 
-// // // const App = () => {
-// // //   // useLayoutEffect(() => {
-// // //   //   const refreshTriggers = () => {
-// // //   //     ScrollTrigger.refresh();
-// // //   //   };
-// // //   //   refreshTriggers();
-// // //   //   window.addEventListener("load", refreshTriggers);
-// // //   //   return () => {
-// // //   //     window.removeEventListener("load", refreshTriggers);
-// // //   //     ScrollTrigger.getAll().forEach((t) => t.kill());
-// // //   //   };
-// // //   // }, []);
-// // //   useLayoutEffect(() => {
-// // //     const refreshTriggers = () => ScrollTrigger.refresh();
-// // //     window.addEventListener("load", refreshTriggers);
+// // // // // // const App = () => {
+// // // // // //   // useLayoutEffect(() => {
+// // // // // //   //   const refreshTriggers = () => {
+// // // // // //   //     ScrollTrigger.refresh();
+// // // // // //   //   };
+// // // // // //   //   refreshTriggers();
+// // // // // //   //   window.addEventListener("load", refreshTriggers);
+// // // // // //   //   return () => {
+// // // // // //   //     window.removeEventListener("load", refreshTriggers);
+// // // // // //   //     ScrollTrigger.getAll().forEach((t) => t.kill());
+// // // // // //   //   };
+// // // // // //   // }, []);
+// // // // // //   useLayoutEffect(() => {
+// // // // // //     const refreshTriggers = () => ScrollTrigger.refresh();
+// // // // // //     window.addEventListener("load", refreshTriggers);
 
-// // //     const ctx = gsap.context(() => {
-// // //       // Transisi dari terang ke gelap
-// // //       gsap.to("#transition-to-black", {
-// // //         opacity: 1,
-// // //         scrollTrigger: {
-// // //           trigger: "#tech-showcase",
-// // //           start: "bottom 70%",
-// // //           end: "bottom top",
-// // //           scrub: true,
-// // //         },
-// // //       });
-// // //       // Transisi kembali ke terang SETELAH semua journey selesai
-// // //       gsap.to("#transition-to-black", {
-// // //         opacity: 0,
-// // //         scrollTrigger: {
-// // //           trigger: "#global-reach-journey", // Pemicu di akhir journey
-// // //           start: "bottom bottom",
-// // //           end: "bottom 70%",
-// // //           scrub: true,
-// // //         },
-// // //       });
-// // //     });
+// // // // // //     const ctx = gsap.context(() => {
+// // // // // //       // Transisi dari terang ke gelap
+// // // // // //       gsap.to("#transition-to-black", {
+// // // // // //         opacity: 1,
+// // // // // //         scrollTrigger: {
+// // // // // //           trigger: "#tech-showcase",
+// // // // // //           start: "bottom 70%",
+// // // // // //           end: "bottom top",
+// // // // // //           scrub: true,
+// // // // // //         },
+// // // // // //       });
+// // // // // //       // Transisi kembali ke terang SETELAH semua journey selesai
+// // // // // //       gsap.to("#transition-to-black", {
+// // // // // //         opacity: 0,
+// // // // // //         scrollTrigger: {
+// // // // // //           trigger: "#global-reach-journey", // Pemicu di akhir journey
+// // // // // //           start: "bottom bottom",
+// // // // // //           end: "bottom 70%",
+// // // // // //           scrub: true,
+// // // // // //         },
+// // // // // //       });
+// // // // // //     });
 
-// // //     return () => {
-// // //       window.removeEventListener("load", refreshTriggers);
-// // //       ScrollTrigger.getAll().forEach((t) => t.kill());
-// // //       ctx.revert();
-// // //     };
-// // //   }, []);
+// // // // // //     return () => {
+// // // // // //       window.removeEventListener("load", refreshTriggers);
+// // // // // //       ScrollTrigger.getAll().forEach((t) => t.kill());
+// // // // // //       ctx.revert();
+// // // // // //     };
+// // // // // //   }, []);
 
-// // //   return (
-// // //     <>
-// // //       <Scene />
-// // //       <div id="content" className="relative z-10">
-// // //         <main className="container mx-auto max-w-7xl">
-// // //           <Navbar />
-// // //           <Hero />
-// // //           <Services />
-// // //           <TechShowcase />
-// // //         </main>
-// // //         {/* Journey Sections sekarang lengkap dengan 3 bagian */}
-// // //         <div className="full-bleed-wrapper bg-black">
-// // //           <IntroductionJourney /> {/* <-- TAMBAHKAN DI SINI */}
-// // //           <PhilosophyJourney />
-// // //           <ToolkitJourney />
-// // //           <GlobalReachJourney />
-// // //         </div>
-// // //         <main className="container mx-auto max-w-7xl">
-// // //           {/* <About /> */}
-// // //           <Projects />
-// // //           <Experiences />
-// // //           <Testimonial />
-// // //           <Philosophy />
-// // //           <Playground />
-// // //           <AssetShowcase /> {/* <-- TAMBAHKAN DI SINI */}
-// // //           <Credits />
-// // //           <Contact />
-// // //           <Footer />
-// // //         </main>
-// // //       </div>
-// // //     </>
-// // //   );
-// // // };
+// // // // // //   return (
+// // // // // //     <>
+// // // // // //       <Scene />
+// // // // // //       <div id="content" className="relative z-10">
+// // // // // //         <main className="container mx-auto max-w-7xl">
+// // // // // //           <Navbar />
+// // // // // //           <Hero />
+// // // // // //           <Services />
+// // // // // //           <TechShowcase />
+// // // // // //         </main>
+// // // // // //         {/* Journey Sections sekarang lengkap dengan 3 bagian */}
+// // // // // //         <div className="full-bleed-wrapper bg-black">
+// // // // // //           <IntroductionJourney /> {/* <-- TAMBAHKAN DI SINI */}
+// // // // // //           <PhilosophyJourney />
+// // // // // //           <ToolkitJourney />
+// // // // // //           <GlobalReachJourney />
+// // // // // //         </div>
+// // // // // //         <main className="container mx-auto max-w-7xl">
+// // // // // //           {/* <About /> */}
+// // // // // //           <Projects />
+// // // // // //           <Experiences />
+// // // // // //           <Testimonial />
+// // // // // //           <Philosophy />
+// // // // // //           <Playground />
+// // // // // //           <AssetShowcase /> {/* <-- TAMBAHKAN DI SINI */}
+// // // // // //           <Credits />
+// // // // // //           <Contact />
+// // // // // //           <Footer />
+// // // // // //         </main>
+// // // // // //       </div>
+// // // // // //     </>
+// // // // // //   );
+// // // // // // };
 
-// // // export default App;
+// // // // // // export default App;
+// // // // // import React, { Suspense, useLayoutEffect } from "react";
+// // // // // import gsap from "gsap";
+// // // // // import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// // // // // import Navbar from "./sections/Navbar";
+// // // // // import Footer from "./sections/Footer";
+// // // // // import Scene from "./components/Scene";
+
+// // // // // const Hero = React.lazy(() => import("./sections/Hero"));
+// // // // // const Services = React.lazy(() => import("./sections/Services"));
+// // // // // const TechShowcase = React.lazy(() => import("./sections/TechShowcase"));
+// // // // // const IntroductionJourney = React.lazy(() =>
+// // // // //   import("./sections/Introduction_Journey")
+// // // // // );
+// // // // // const PhilosophyJourney = React.lazy(() =>
+// // // // //   import("./sections/Philosophy_Journey")
+// // // // // );
+// // // // // const ToolkitJourney = React.lazy(() => import("./sections/Toolkit_Journey"));
+// // // // // const GlobalReachJourney = React.lazy(() =>
+// // // // //   import("./sections/GlobalReach_Journey")
+// // // // // );
+// // // // // const Projects = React.lazy(() => import("./sections/Projects"));
+// // // // // const Experiences = React.lazy(() => import("./sections/Experiences"));
+// // // // // const Testimonial = React.lazy(() => import("./sections/Testimonial"));
+// // // // // const Philosophy = React.lazy(() => import("./sections/Philosophy")); // <-- DITAMBAHKAN KEMBALI
+// // // // // const Playground = React.lazy(() => import("./sections/Playground"));
+// // // // // const AssetShowcase = React.lazy(() => import("./sections/AssetShowcase"));
+// // // // // const Credits = React.lazy(() => import("./sections/Credits"));
+// // // // // const Contact = React.lazy(() => import("./sections/Contact"));
+
+// // // // // gsap.registerPlugin(ScrollTrigger);
+
+// // // // // const SectionLoader = () => (
+// // // // //   <div className="flex items-center justify-center h-screen">
+// // // // //     <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-accent-dark"></div>
+// // // // //   </div>
+// // // // // );
+
+// // // // // const App = () => {
+// // // // //   useLayoutEffect(() => {
+// // // // //     const refreshTriggers = () => ScrollTrigger.refresh();
+// // // // //     window.addEventListener("load", refreshTriggers);
+
+// // // // //     const ctx = gsap.context(() => {
+// // // // //       gsap.to("#transition-to-black", {
+// // // // //         opacity: 1,
+// // // // //         scrollTrigger: {
+// // // // //           trigger: "#tech-showcase",
+// // // // //           start: "bottom 70%",
+// // // // //           end: "bottom top",
+// // // // //           scrub: true,
+// // // // //         },
+// // // // //       });
+// // // // //       gsap.to("#transition-to-black", {
+// // // // //         opacity: 0,
+// // // // //         scrollTrigger: {
+// // // // //           trigger: "#global-reach-journey",
+// // // // //           start: "bottom bottom",
+// // // // //           end: "bottom 70%",
+// // // // //           scrub: true,
+// // // // //         },
+// // // // //       });
+// // // // //     });
+
+// // // // //     return () => {
+// // // // //       window.removeEventListener("load", refreshTriggers);
+// // // // //       ScrollTrigger.getAll().forEach((t) => t.kill());
+// // // // //       ctx.revert();
+// // // // //     };
+// // // // //   }, []);
+
+// // // // //   return (
+// // // // //     <>
+// // // // //       <div
+// // // // //         id="transition-to-black"
+// // // // //         className="transition-overlay bg-black"
+// // // // //       ></div>
+// // // // //       <Scene />
+// // // // //       <div id="content" className="relative z-10">
+// // // // //         <Navbar />
+
+// // // // //         <main className="container mx-auto max-w-7xl">
+// // // // //           <Suspense fallback={<SectionLoader />}>
+// // // // //             <Hero />
+// // // // //             <Services />
+// // // // //             <TechShowcase />
+// // // // //           </Suspense>
+// // // // //         </main>
+
+// // // // //         <div className="full-bleed-wrapper bg-black">
+// // // // //           <Suspense fallback={<SectionLoader />}>
+// // // // //             <IntroductionJourney />
+// // // // //             <PhilosophyJourney />
+// // // // //             <ToolkitJourney />
+// // // // //             <GlobalReachJourney />
+// // // // //           </Suspense>
+// // // // //         </div>
+
+// // // // //         <main className="container mx-auto max-w-7xl">
+// // // // //           <Suspense fallback={<SectionLoader />}>
+// // // // //             <Projects />
+// // // // //             <Experiences />
+// // // // //             <Testimonial />
+// // // // //             <Philosophy /> {/* <-- DITEMPATKAN DI SINI */}
+// // // // //             <Playground />
+// // // // //             <AssetShowcase />
+// // // // //             <Credits />
+// // // // //             <Contact />
+// // // // //           </Suspense>
+// // // // //         </main>
+
+// // // // //         <Footer />
+// // // // //       </div>
+// // // // //     </>
+// // // // //   );
+// // // // // };
+
+// // // // // export default App;
+
+// // // // import React, { Suspense, useLayoutEffect } from "react";
+// // // // import gsap from "gsap";
+// // // // import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// // // // import Navbar from "./sections/Navbar";
+// // // // import Footer from "./sections/Footer";
+// // // // import Scene from "./components/Scene";
+// // // // import JourneyWrapper from "./components/JourneyWrapper"; // <-- IMPORT BARU
+
+// // // // const Hero = React.lazy(() => import("./sections/Hero"));
+// // // // const Services = React.lazy(() => import("./sections/Services"));
+// // // // const TechShowcase = React.lazy(() => import("./sections/TechShowcase"));
+// // // // const IntroductionJourney = React.lazy(() =>
+// // // //   import("./sections/Introduction_Journey")
+// // // // );
+// // // // const PhilosophyJourney = React.lazy(() =>
+// // // //   import("./sections/Philosophy_Journey")
+// // // // );
+// // // // const ToolkitJourney = React.lazy(() => import("./sections/Toolkit_Journey"));
+// // // // const GlobalReachJourney = React.lazy(() =>
+// // // //   import("./sections/GlobalReach_Journey")
+// // // // );
+// // // // const Projects = React.lazy(() => import("./sections/Projects"));
+// // // // const Experiences = React.lazy(() => import("./sections/Experiences"));
+// // // // const Testimonial = React.lazy(() => import("./sections/Testimonial"));
+// // // // const Philosophy = React.lazy(() => import("./sections/Philosophy"));
+// // // // const Playground = React.lazy(() => import("./sections/Playground"));
+// // // // const AssetShowcase = React.lazy(() => import("./sections/AssetShowcase"));
+// // // // const Credits = React.lazy(() => import("./sections/Credits"));
+// // // // const Contact = React.lazy(() => import("./sections/Contact"));
+
+// // // // gsap.registerPlugin(ScrollTrigger);
+
+// // // // const SectionLoader = () => (
+// // // //   <div className="flex items-center justify-center h-screen">
+// // // //     <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-accent-dark"></div>
+// // // //   </div>
+// // // // );
+
+// // // // const App = () => {
+// // // //   useLayoutEffect(() => {
+// // // //     const refreshTriggers = () => ScrollTrigger.refresh(true); // Paksa refresh
+// // // //     window.addEventListener("load", refreshTriggers);
+// // // //     return () => {
+// // // //       window.removeEventListener("load", refreshTriggers);
+// // // //       ScrollTrigger.getAll().forEach((t) => t.kill());
+// // // //     };
+// // // //   }, []);
+
+// // // //   return (
+// // // //     <>
+// // // //       <Scene />
+// // // //       <div id="content" className="relative z-10">
+// // // //         <Navbar />
+// // // //         <Suspense fallback={<SectionLoader />}>
+// // // //           <main className="container mx-auto max-w-7xl">
+// // // //             <Hero />
+// // // //             <Services />
+// // // //             <TechShowcase />
+// // // //           </main>
+
+// // // //           <JourneyWrapper>
+// // // //             <IntroductionJourney />
+// // // //             <PhilosophyJourney />
+// // // //             <ToolkitJourney />
+// // // //             <GlobalReachJourney />
+// // // //           </JourneyWrapper>
+
+// // // //           <main className="container mx-auto max-w-7xl">
+// // // //             <Projects />
+// // // //             <Experiences />
+// // // //             <Testimonial />
+// // // //             <Philosophy />
+// // // //             <Playground />
+// // // //             <AssetShowcase />
+// // // //             <Credits />
+// // // //             <Contact />
+// // // //           </main>
+
+// // // //           <Footer />
+// // // //         </Suspense>
+// // // //       </div>
+// // // //     </>
+// // // //   );
+// // // // };
+
+// // // // export default App;
+
 // // import React, { Suspense, useLayoutEffect } from "react";
 // // import gsap from "gsap";
 // // import { ScrollTrigger } from "gsap/ScrollTrigger";
+// // import JourneyWrapper from "./components/JourneyWrapper";
 
 // // import Navbar from "./sections/Navbar";
 // // import Footer from "./sections/Footer";
-// // import Scene from "./components/Scene";
 
 // // const Hero = React.lazy(() => import("./sections/Hero"));
 // // const Services = React.lazy(() => import("./sections/Services"));
@@ -128,7 +335,7 @@
 // // const Projects = React.lazy(() => import("./sections/Projects"));
 // // const Experiences = React.lazy(() => import("./sections/Experiences"));
 // // const Testimonial = React.lazy(() => import("./sections/Testimonial"));
-// // const Philosophy = React.lazy(() => import("./sections/Philosophy")); // <-- DITAMBAHKAN KEMBALI
+// // const Philosophy = React.lazy(() => import("./sections/Philosophy"));
 // // const Playground = React.lazy(() => import("./sections/Playground"));
 // // const AssetShowcase = React.lazy(() => import("./sections/AssetShowcase"));
 // // const Credits = React.lazy(() => import("./sections/Credits"));
@@ -144,93 +351,56 @@
 
 // // const App = () => {
 // //   useLayoutEffect(() => {
-// //     const refreshTriggers = () => ScrollTrigger.refresh();
+// //     const refreshTriggers = () => ScrollTrigger.refresh(true);
 // //     window.addEventListener("load", refreshTriggers);
-
-// //     const ctx = gsap.context(() => {
-// //       gsap.to("#transition-to-black", {
-// //         opacity: 1,
-// //         scrollTrigger: {
-// //           trigger: "#tech-showcase",
-// //           start: "bottom 70%",
-// //           end: "bottom top",
-// //           scrub: true,
-// //         },
-// //       });
-// //       gsap.to("#transition-to-black", {
-// //         opacity: 0,
-// //         scrollTrigger: {
-// //           trigger: "#global-reach-journey",
-// //           start: "bottom bottom",
-// //           end: "bottom 70%",
-// //           scrub: true,
-// //         },
-// //       });
-// //     });
-
 // //     return () => {
 // //       window.removeEventListener("load", refreshTriggers);
 // //       ScrollTrigger.getAll().forEach((t) => t.kill());
-// //       ctx.revert();
 // //     };
 // //   }, []);
 
 // //   return (
-// //     <>
-// //       <div
-// //         id="transition-to-black"
-// //         className="transition-overlay bg-black"
-// //       ></div>
-// //       <Scene />
-// //       <div id="content" className="relative z-10">
-// //         <Navbar />
-
+// //     // <Scene> sudah tidak ada lagi
+// //     <div id="content" className="relative z-10 bg-background">
+// //       <Navbar />
+// //       <Suspense fallback={<SectionLoader />}>
+// //         <Hero /> {/* Hero sekarang membawa scene 3D-nya sendiri */}
 // //         <main className="container mx-auto max-w-7xl">
-// //           <Suspense fallback={<SectionLoader />}>
-// //             <Hero />
-// //             <Services />
-// //             <TechShowcase />
-// //           </Suspense>
+// //           <Services />
+// //           <TechShowcase />
 // //         </main>
-
-// //         <div className="full-bleed-wrapper bg-black">
-// //           <Suspense fallback={<SectionLoader />}>
-// //             <IntroductionJourney />
-// //             <PhilosophyJourney />
-// //             <ToolkitJourney />
-// //             <GlobalReachJourney />
-// //           </Suspense>
-// //         </div>
-
+// //         <JourneyWrapper>
+// //           <IntroductionJourney />
+// //           <PhilosophyJourney />
+// //           <ToolkitJourney />
+// //           <GlobalReachJourney />
+// //         </JourneyWrapper>
 // //         <main className="container mx-auto max-w-7xl">
-// //           <Suspense fallback={<SectionLoader />}>
-// //             <Projects />
-// //             <Experiences />
-// //             <Testimonial />
-// //             <Philosophy /> {/* <-- DITEMPATKAN DI SINI */}
-// //             <Playground />
-// //             <AssetShowcase />
-// //             <Credits />
-// //             <Contact />
-// //           </Suspense>
+// //           <Projects />
+// //           <Experiences />
+// //           <Testimonial />
+// //           <Philosophy />
+// //           <Playground />
+// //           <AssetShowcase />
+// //           <Credits />
+// //           <Contact />
 // //         </main>
-
 // //         <Footer />
-// //       </div>
-// //     </>
+// //       </Suspense>
+// //     </div>
 // //   );
 // // };
 
 // // export default App;
 
-// import React, { Suspense, useLayoutEffect } from "react";
+// import React, { useLayoutEffect } from "react";
 // import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// import JourneyWrapper from "./components/JourneyWrapper";
+// import LazySection from "./components/LazySection";
 // import Navbar from "./sections/Navbar";
 // import Footer from "./sections/Footer";
-// import Scene from "./components/Scene";
-// import JourneyWrapper from "./components/JourneyWrapper"; // <-- IMPORT BARU
 
 // const Hero = React.lazy(() => import("./sections/Hero"));
 // const Services = React.lazy(() => import("./sections/Services"));
@@ -256,56 +426,84 @@
 
 // gsap.registerPlugin(ScrollTrigger);
 
-// const SectionLoader = () => (
-//   <div className="flex items-center justify-center h-screen">
-//     <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-accent-dark"></div>
-//   </div>
-// );
-
 // const App = () => {
 //   useLayoutEffect(() => {
-//     const refreshTriggers = () => ScrollTrigger.refresh(true); // Paksa refresh
-//     window.addEventListener("load", refreshTriggers);
-//     return () => {
-//       window.removeEventListener("load", refreshTriggers);
-//       ScrollTrigger.getAll().forEach((t) => t.kill());
-//     };
+//     const ctx = gsap.context(() => {
+//       // Refresh ScrollTrigger after all assets (especially images) are loaded
+//       // to ensure positions are calculated correctly.
+//       const refreshTriggers = () => ScrollTrigger.refresh();
+//       window.addEventListener("load", refreshTriggers);
+
+//       return () => {
+//         window.removeEventListener("load", refreshTriggers);
+//         // The context will automatically kill all GSAP animations and ScrollTriggers created within it.
+//       };
+//     });
+//     return () => ctx.revert();
 //   }, []);
 
 //   return (
-//     <>
-//       <Scene />
-//       <div id="content" className="relative z-10">
-//         <Navbar />
-//         <Suspense fallback={<SectionLoader />}>
-//           <main className="container mx-auto max-w-7xl">
-//             <Hero />
-//             <Services />
-//             <TechShowcase />
-//           </main>
+//     <div id="content" className="relative z-10 bg-background">
+//       <Navbar />
+//       <LazySection>
+//         <Hero />
+//       </LazySection>
 
-//           <JourneyWrapper>
-//             <IntroductionJourney />
-//             <PhilosophyJourney />
-//             <ToolkitJourney />
-//             <GlobalReachJourney />
-//           </JourneyWrapper>
+//       <main className="container mx-auto max-w-7xl">
+//         <LazySection>
+//           <Services />
+//         </LazySection>
+//         <LazySection>
+//           <TechShowcase />
+//         </LazySection>
+//       </main>
 
-//           <main className="container mx-auto max-w-7xl">
-//             <Projects />
-//             <Experiences />
-//             <Testimonial />
-//             <Philosophy />
-//             <Playground />
-//             <AssetShowcase />
-//             <Credits />
-//             <Contact />
-//           </main>
+//       <JourneyWrapper>
+//         <LazySection>
+//           <IntroductionJourney />
+//         </LazySection>
+//         <LazySection>
+//           <PhilosophyJourney />
+//         </LazySection>
+//         <LazySection>
+//           <ToolkitJourney />
+//         </LazySection>
+//         <LazySection>
+//           <GlobalReachJourney />
+//         </LazySection>
+//       </JourneyWrapper>
 
-//           <Footer />
-//         </Suspense>
-//       </div>
-//     </>
+//       <main className="container mx-auto max-w-7xl">
+//         <LazySection>
+//           <Projects />
+//         </LazySection>
+//         <LazySection>
+//           <Experiences />
+//         </LazySection>
+//         <LazySection>
+//           <Testimonial />
+//         </LazySection>
+//         <LazySection>
+//           <Philosophy />
+//         </LazySection>
+//         <LazySection>
+//           <Playground />
+//         </LazySection>
+//         <LazySection>
+//           <AssetShowcase />
+//         </LazySection>
+//         <LazySection>
+//           <Credits />
+//         </LazySection>
+//         <LazySection>
+//           <Contact />
+//         </LazySection>
+//       </main>
+
+//       <LazySection>
+//         <Footer />
+//       </LazySection>
+//     </div>
 //   );
 // };
 
@@ -314,12 +512,14 @@
 import React, { Suspense, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import JourneyWrapper from "./components/JourneyWrapper";
 
 import Navbar from "./sections/Navbar";
+import Hero from "./sections/Hero"; // <- UBAH INI: Import Hero secara statis
+import LazySection from "./components/LazySection";
+import JourneyWrapper from "./components/JourneyWrapper";
 import Footer from "./sections/Footer";
 
-const Hero = React.lazy(() => import("./sections/Hero"));
+// Hapus Hero dari lazy load, sisanya biarkan
 const Services = React.lazy(() => import("./sections/Services"));
 const TechShowcase = React.lazy(() => import("./sections/TechShowcase"));
 const IntroductionJourney = React.lazy(() =>
@@ -343,50 +543,80 @@ const Contact = React.lazy(() => import("./sections/Contact"));
 
 gsap.registerPlugin(ScrollTrigger);
 
-const SectionLoader = () => (
-  <div className="flex items-center justify-center h-screen">
-    <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-accent-dark"></div>
-  </div>
-);
-
 const App = () => {
   useLayoutEffect(() => {
-    const refreshTriggers = () => ScrollTrigger.refresh(true);
-    window.addEventListener("load", refreshTriggers);
-    return () => {
-      window.removeEventListener("load", refreshTriggers);
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
+    const ctx = gsap.context(() => {
+      const refreshTriggers = () => ScrollTrigger.refresh();
+      window.addEventListener("load", refreshTriggers);
+      return () => {
+        window.removeEventListener("load", refreshTriggers);
+      };
+    });
+    return () => ctx.revert();
   }, []);
 
   return (
-    // <Scene> sudah tidak ada lagi
     <div id="content" className="relative z-10 bg-background">
       <Navbar />
-      <Suspense fallback={<SectionLoader />}>
-        <Hero /> {/* Hero sekarang membawa scene 3D-nya sendiri */}
-        <main className="container mx-auto max-w-7xl">
+
+      {/* Cukup panggil Hero seperti ini */}
+      <Hero />
+
+      <main className="container mx-auto max-w-7xl">
+        <LazySection>
           <Services />
+        </LazySection>
+        <LazySection>
           <TechShowcase />
-        </main>
-        <JourneyWrapper>
+        </LazySection>
+      </main>
+
+      <JourneyWrapper>
+        <LazySection>
           <IntroductionJourney />
+        </LazySection>
+        <LazySection>
           <PhilosophyJourney />
+        </LazySection>
+        <LazySection>
           <ToolkitJourney />
+        </LazySection>
+        <LazySection>
           <GlobalReachJourney />
-        </JourneyWrapper>
-        <main className="container mx-auto max-w-7xl">
+        </LazySection>
+      </JourneyWrapper>
+
+      <main className="container mx-auto max-w-7xl">
+        {/* ... sisa komponen Anda ... */}
+        <LazySection>
           <Projects />
+        </LazySection>
+        <LazySection>
           <Experiences />
+        </LazySection>
+        <LazySection>
           <Testimonial />
+        </LazySection>
+        <LazySection>
           <Philosophy />
+        </LazySection>
+        <LazySection>
           <Playground />
+        </LazySection>
+        <LazySection>
           <AssetShowcase />
+        </LazySection>
+        <LazySection>
           <Credits />
+        </LazySection>
+        <LazySection>
           <Contact />
-        </main>
+        </LazySection>
+      </main>
+
+      <LazySection>
         <Footer />
-      </Suspense>
+      </LazySection>
     </div>
   );
 };

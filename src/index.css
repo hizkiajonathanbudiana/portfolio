@@ -278,3 +278,8 @@ overflow-x: hidden;
 .full-bleed-wrapper {
   @apply relative w-full;
 }
+
+/* Tambahkan ini di mana saja di dalam index.css */
+.gpu-layer {
+  will-change: transform, opacity;
+}
