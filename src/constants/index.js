@@ -1,51 +1,51 @@
 export const myProjects = [
-  {
-    id: 1,
-    title: "E-commerce Platform",
-    description: "",
-    subDescription: [""],
-    href: "",
-    logo: "",
-    image: "/assets/projects/accessories.jpg",
-    tags: [
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Authentication & Authorization System",
-    description: "",
-    subDescription: [""],
-    href: "",
-    logo: "",
-    image: "/assets/projects/auth-system.jpg",
-    tags: [
-      {
-        id: 1,
-        name: "Auth0",
-        path: "/assets/logos/auth0.svg",
-      },
-      {
-        id: 2,
-        name: "React",
-        path: "/assets/logos/react.svg",
-      },
-      {
-        id: 3,
-        name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
-      },
-    ],
-  },
+  // {
+  //   id: 1,
+  //   title: "E-commerce Platform",
+  //   description: "",
+  //   subDescription: [""],
+  //   href: "",
+  //   logo: "",
+  //   image: "/assets/projects/accessories.jpg",
+  //   tags: [
+  //     {
+  //       id: 4,
+  //       name: "TailwindCSS",
+  //       path: "/assets/logos/tailwindcss.svg",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 2,
+  //   title: "Authentication & Authorization System",
+  //   description: "",
+  //   subDescription: [""],
+  //   href: "",
+  //   logo: "",
+  //   image: "/assets/projects/auth-system.jpg",
+  //   tags: [
+  //     {
+  //       id: 1,
+  //       name: "Auth0",
+  //       path: "/assets/logos/auth0.svg",
+  //     },
+  //     {
+  //       id: 2,
+  //       name: "React",
+  //       path: "/assets/logos/react.svg",
+  //     },
+  //     {
+  //       id: 3,
+  //       name: "SQLite",
+  //       path: "/assets/logos/sqlite.svg",
+  //     },
+  //     {
+  //       id: 4,
+  //       name: "TailwindCSS",
+  //       path: "/assets/logos/tailwindcss.svg",
+  //     },
+  //   ],
+  // },
 ];
 
 export const mySocials = [
@@ -67,15 +67,15 @@ export const mySocials = [
 ];
 
 export const experiences = [
-  {
-    title: "Freelance Developer",
-    job: "Self-Employed",
-    date: "2025-Present",
-    contents: [
-      "Created a personal portfolio using Three.js, React, Vite, and WebAPI to showcase technical expertise.",
-      "Continuously enhancing technical skills and expanding expertise in modern web development and back-end technologies.",
-    ],
-  },
+  // {
+  //   title: "Freelance Developer",
+  //   job: "Self-Employed",
+  //   date: "2025-Present",
+  //   contents: [
+  //     "Created a personal portfolio using Three.js, React, Vite, and WebAPI to showcase technical expertise.",
+  //     "Continuously enhancing technical skills and expanding expertise in modern web development and back-end technologies.",
+  //   ],
+  // },
 ];
 export const reviews = [
   {
